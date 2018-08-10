@@ -1,0 +1,35 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}sportScheduleFE]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}sportScheduleFE]
+		(
+	[ModuleID] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[LeagueID] [int] NULL,
+	[CreatedByUser] [int] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL
+      	)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}sportScheduleFE] ADD CONSTRAINT [PK_{objectQualifier}sportScheduleFE] PRIMARY KEY CLUSTERED  ([Id])
+		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}sportScheduleFE] ON {databaseOwner}[{objectQualifier}sportScheduleFE] ([ModuleID])
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}sportScheduleFE] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}sportScheduleFE_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE NOT FOR REPLICATION
+	END
+GO

@@ -1,0 +1,186 @@
+/*NavBar and Footer*/
+
+
+.text-navbar-brand {
+    margin-top: 2%;
+    color: #3c763d !important;
+}
+
+.text-navbar {
+    margin-top: 3%;
+}
+
+.navbar {
+    height: 65px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navbar-header-edit {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand-edit {
+    float: none;
+}
+
+.brand-text-edit {
+    margin-right: 2%;
+    margin-left: 2%;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 3%;
+    color: #3c763d !important;
+}
+
+.link-hover:hover{
+    color: #16DF4B !important;
+    text-decoration:none;
+}
+
+
+.footer {
+    margin-top: 5%;
+    padding-top: 3%;
+    height: 120px;
+    background-color: #222;
+    border-color: #080808;
+    font-size:1.5em;
+    
+}
+
+
+
+
+/*Body*/
+
+/*
+.page-header {
+    height: 70%;
+    margin-top: 30px;
+    border-bottom: none;
+}
+*/
+
+.page-header
+{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    border-bottom: none;
+}
+
+.section-header {
+    margin-top: 3%;
+    margin-bottom: 4%;
+    border-bottom: none;
+    color: #3c763d !important;
+}
+
+.footer-link {
+    color: #3c763d !important;
+}
+
+.border {
+    margin-top: 3%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    /*background-color: #cfcfcf;*/
+    border-radius: 25px;
+}
+
+.border-info {
+    margin-top: 2%;
+}
+
+.image-error {
+    margin-top: 8%;
+}
+
+.message-text {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+.bg-gray {
+    background-color: #cfcfcf;
+}
+
+/*loader waiting*/
+
+.loading {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #5CB85C; /* green */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-dialog {
+    margin-top: 10%;
+}
+
+#loader {
+    text-align: center;
+    display: inline-block;
+}
+
+.modal-body {
+    margin-top: 10%;
+    margin-bottom: 13%;
+   
+    
+}
+
+.text-modal {
+    margin-bottom: 5%;
+    
+}
+
+/* Standigs */
+
+thead
+{
+    background-color: #222;
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #cfcfcf;
+}
+
+/*Leagues*/
+
+
+
+.radioButton{
+    margin-top:40%;
+}
+
+#saveButton {
+    margin-top: 3%;
+    width: 8%;
+}
